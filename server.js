@@ -1,0 +1,12 @@
+const express = require("express");
+const app = express();
+const imageRouter = require("./routes/image-route");
+
+app.set("view engine", "ejs");
+
+const PORT = process.env.PORT || 8081;
+app.use("/", imageRouter);
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
