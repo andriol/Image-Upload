@@ -31,10 +31,10 @@ module.exports = {
     });
   },
 
-  //   displayImage: function (req, res) {
-  //     imageModel.displayImage(function (data) {
-  //       res.render("display-image", { imagePath: data });
-  //       console.log(data[0].image);
-  //     });
-  //   },
+  displayImage: function (req, res) {
+    imageModel.displayImage(function (data) {
+      res.render("display-image", { imagePath: data });
+      //console.log(data[0].image);
+    });
+  },
 };
