@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const imageController = require("../controllers/image-controller");
 
-router.get("/store-image", imageController.imageUploadForm);
+router.get("/store-image", imageController.uploadForm);
 
 router.post("/store-image", imageController.storeImage);
 

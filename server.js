@@ -4,7 +4,8 @@ const imageRouter = require("./routes/image-route");
 
 app.set("view engine", "ejs");
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8081;
+
 app.use("/", imageRouter);
 app.use(express.static("public"));
 
