@@ -24,7 +24,7 @@ function storeImage(req, res) {
       // call model
       imageModel.storeImage(inputValues, function (data) {
         console.log(data);
-        res.render("upload-form", { alertMsg: data });
+        res.render("upload-form");
       });
     }
   });

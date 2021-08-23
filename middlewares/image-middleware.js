@@ -1,18 +1,18 @@
 var multer = require("multer");
 
-image = {
+module.exports.image = {
   storage: function () {
-    const storage = multer.diskStorage({
+    var storage = multer.diskStorage({
       destination: function (req, file, cb) {
         cb(null, "public/images/");
       },
       filename: function (req, file, cb) {
         cb(null, file.originalname);
+        console.log(file.originalname);
       },
     });
     return storage;
   },
-
   allowedImage: function (req, file, cb) {
     if (
       file.mimetype.includes("jpeg") ||
@@ -25,4 +25,3 @@ image = {
     }
   },
 };
-module.exports = image;
